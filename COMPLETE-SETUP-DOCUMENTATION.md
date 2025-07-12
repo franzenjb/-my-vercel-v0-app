@@ -101,17 +101,44 @@ git push
 
 ## 🔐 ENVIRONMENT VARIABLES & SECRETS
 
-### Current Environment Variables (.env.local)
-```
-POSTGRES_URL="postgres://de46c099a18d80d0a4e1b83f9b12069d9a9cb9f3def58cf2330c36a22d84154d:sk_W5GH5iuB5rRaAGMmQ1aWa@db.prisma.io:5432/?sslmode=require"
-PRISMA_DATABASE_URL="prisma+postgres://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqd3RfaWQiOjEsInNlY3VyZV9rZXkiOiJza19XNUdINWl1QjVyUmFBR01tUTFhV2EiLCJhcGlfa2V5IjoiMDFKWlpTV1RZMlQ5M0dHOTgxRTcyR0tSRUUiLCJ0ZW5hbnRfaWQiOiJkZTQ2YzA5OWExOGQ4MGQwYTRlMWI4M2Y5YjEyMDY5ZDlhOWNiOWYzZGVmNThjZjIzMzBjMzZhMjJkODQxNTRkIiwiaW50ZXJuYWxfc2VjcmV0IjoiZmNmOTA2MWEtODNhZS00ZGI2LWE5YzQtYTk3N2MwNWU1NzZmIn0.JZYOD2diPWig_sW1HzlL0zJJbSvMucfJAmI2REahaDU"
-DATABASE_URL="postgres://de46c099a18d80d0a4e1b83f9b12069d9a9cb9f3def58cf2330c36a22d84154d:sk_W5GH5iuB5rRaAGMmQ1aWa@db.prisma.io:5432/?sslmode=require"
+### ⚠️ CRITICAL FOR ALL FUTURE AGENTS ⚠️
+
+**NEVER ASK "WHERE IS YOUR .ENV FILE?" - THE ANSWER IS ALWAYS:**
+
+**`/Users/jefffranzen/Desktop/REPOSITORIES/API-KEYS/MASTER_CREDENTIALS.env`**
+
+### Centralized Credentials System
+- **Master file:** `/Users/jefffranzen/Desktop/REPOSITORIES/API-KEYS/MASTER_CREDENTIALS.env`
+- **Contains:** ALL API keys for ALL projects
+- **Usage:** Load this file in ANY project that needs credentials
+
+### How to Load in Projects
+```python
+# Python
+from dotenv import load_dotenv
+load_dotenv('/Users/jefffranzen/Desktop/REPOSITORIES/API-KEYS/MASTER_CREDENTIALS.env')
 ```
 
-### Vercel Environment Variables
-These are also configured in Vercel dashboard:
-- Go to: Vercel Dashboard → Project → Settings → Environment Variables
-- All database credentials are synced between local and production
+```javascript
+// Node.js/Next.js
+require('dotenv').config({ 
+  path: '/Users/jefffranzen/Desktop/REPOSITORIES/API-KEYS/MASTER_CREDENTIALS.env' 
+});
+```
+
+### Available Credentials in Master File
+- ✅ Anthropic/Claude API Key
+- ✅ OpenAI/ChatGPT API Key
+- ✅ OpenWeather API Key
+- ✅ ArcGIS Client ID/Secret + URLs
+- ✅ Geocodio API Key
+- ✅ Vercel Postgres Database URLs
+- ✅ PythonAnywhere credentials
+- ✅ Power BI workspace/report IDs
+- ✅ Grok API Key
+
+### Local Project Environment (.env.local)
+This project also has local environment variables that reference the master file credentials.
 
 ## 🛠️ CLAUDE CODE CLI SETUP
 
